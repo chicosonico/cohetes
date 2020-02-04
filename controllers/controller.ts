@@ -1,6 +1,6 @@
 
-var rocketList = [];
-var rocketRegEx = /^[0-9][A-Z]$/;
+var rocketList:any = [];
+var rocketRegEx = /^[0-9 A-Z]$/;
 var powerRegEx = /^([0-9])*$/;// let see number type
 var hMany = 0;
 
@@ -24,9 +24,21 @@ function getManyRockets(){
 function createRocket() {
    
   for (let i=0; i<= hMany; ++i ){
-   var rockID = document.getElementById("inputRocket1") as HTMLInputElement;
+   let rockID:any = "";
+   rockID = document.getElementById("inputRocket") as HTMLInputElement;
    
+   if (rockID.value == "" ) {
+            alert("Fields can be empty.");
+            return false;
+         // }else if (rocketRegEx.test(rockID.value)==false){
+         //    alert("Wrong Id Format");
+         //    return false;
 
+         }
+
+         rocketList.push(rockID.value);
+         console.log(rocketList);
+         
  }
 
  

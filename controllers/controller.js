@@ -1,6 +1,6 @@
 "use strict";
 var rocketList = [];
-var rocketRegEx = /^[0-9][A-Z]$/;
+var rocketRegEx = /^[0-9 A-Z]$/;
 var powerRegEx = /^([0-9])*$/; // let see number type
 var hMany = 0;
 // var hMany: any = (<HTMLInputElement>document.querySelector('#hMany')).value;   hMany = parseInt(hMany.value);
@@ -15,7 +15,17 @@ function getManyRockets() {
 }
 function createRocket() {
     for (var i = 0; i <= hMany; ++i) {
-        var rockID = document.getElementById("inputRocket1");
+        var rockID = "";
+        rockID = document.getElementById("inputRocket");
+        if (rockID.value == "") {
+            alert("Fields can be empty.");
+            return false;
+            // }else if (rocketRegEx.test(rockID.value)==false){
+            //    alert("Wrong Id Format");
+            //    return false;
+        }
+        rocketList.push(rockID.value);
+        console.log(rocketList);
     }
     //    //  get rocket data
     //    //empty field validator
