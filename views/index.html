@@ -15,14 +15,13 @@
 <body>
     <main class="container my-5 ">
 
-        <!-- first form -->
-        <div id="formInput" style="display:block">
+        <div id="hManyInput" style="display:block">
             <div class="row align-items-center">
                 <div class="col">
 
                 </div>
                 <div class="col">
-                    <h1 style="text-align: center;">Create a Rocket</h1>
+                    <h1 style="text-align: center;">How many Rockets?</h1>
                 </div>
                 <div class="col">
 
@@ -41,8 +40,8 @@
                         </div>
 
                         <div class="form-group col-md-2">
-                            <label for="inputPlate">Rocket ID</label>
-                            <input type="text" class="form-control" id="inputPlate">
+                            <label for="hMany">Type how many rockets you need: </label>
+                            <input type="text" class="form-control" id="hMany">
                         </div>
 
 
@@ -50,13 +49,14 @@
                         </div>
 
                     </div>
+
+                   
                     <div class="row d-flex justify-content-center">
                         <div class="form-group col-md-2">
-                            <button type="button" class="btn btn-primary" onclick="createCar()">Create</button>
-                            <p id="carInfo"></p>
                         </div>
-
                         <div class="form-group col-md-2">
+                            <button type="button" class="btn btn-primary" onclick="getManyRockets()  ">Create</button>
+                            <p id="carInfo"></p>
                         </div>
 
                         <div class="form-group col-md-2">
@@ -70,7 +70,79 @@
 
 
         </div>
-        <!-- end first form -->
+
+
+        <div id="create_rockets" style="display:block">
+            <div class="row align-items-center">
+                <div class="col">
+
+                </div>
+                <div class="col">
+                    <h1 style="text-align: center;">Create Rockets</h1>
+                </div>
+                <div class="col">
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <form class="container my-5">
+
+                    <div class="row d-flex justify-content-center">
+
+                        
+                        <div class="form-group col-md-2">   
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label for="inputPlate">Rocket ID # 1</label>
+                            <input type="text" class="form-control" id="inputRocket1">
+                        </div>
+
+
+                        <div class="form-group col-md-2">       
+                        </div>
+
+                    </div>
+
+                    <div class="row d-flex justify-content-center">
+
+                        
+                        <div class="form-group col-md-2">   
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label for="inputPlate">Rocket ID # 2</label>
+                            <input type="text" class="form-control" id="inputRocket2">
+                        </div>
+
+
+                        <div class="form-group col-md-2">       
+                        </div>
+
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="form-group col-md-2">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <button type="button" class="btn btn-primary" onclick="createRocket()">Create</button>
+                            <p id="carInfo"></p>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                        </div>
+
+
+                    </div>
+
+                </form>
+            </div>
+
+
+        </div>
+     
 
         <!-- Car Created Title -->
         <div id="carCreatedTitle" style="display:none">
@@ -91,7 +163,7 @@
                     Rocket# 
                 </div>
     
-                <div class="form-group col-md-2" id="rocketID">
+                <div class="form-group col-md-2" id="rocketID1">
                 </div>
     
                 <div class="form-group col-md-2" >
@@ -104,7 +176,7 @@
                     Rocket# 
                 </div>
     
-                <div class="form-group col-md-2" id="rocketID">
+                <div class="form-group col-md-2" id="rocketID2">
                 </div>
     
                 <div class="form-group col-md-2" >
@@ -280,7 +352,7 @@
 
     <script src="../models/car.js"></script>
     <script src="../models/wheel.js"></script>
-    <script src="../controllers/controllerFor.js"></script>
+    <script src="../controllers/controller.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
