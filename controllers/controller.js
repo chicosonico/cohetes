@@ -17,15 +17,18 @@ function createRocket() {
     }
 }
 function addPropulsores(newRocket) {
-    var hMmotors = 0; //hMmotors = How many motors?
+    var hMmotors; //hMmotors = How many motors?
     hMmotors = prompt("Please enter how many thrusters");
     if (hMmotors == "") {
         alert("Fields can't be empty");
     }
     else {
         var power = 0;
+        var maxPower = void 0;
         for (var i = 1; i <= hMmotors; i++) {
-            var newPropulsor = new Motor(power);
+            maxPower = prompt("Please enter max speed of thruster " + [i]);
+            maxPower = parseInt(maxPower);
+            var newPropulsor = new Motor(power, maxPower);
             //  console.log(newPropulsor);
             newRocket.addMotor(newPropulsor);
         }
@@ -44,7 +47,8 @@ function decPower(x) {
     console.log(rocketList);
 }
 function showRocket(x) {
+    var speed = rocketList[0].totalSpeed();
     var showInfo = document.getElementById("showInfo");
     showInfo.innerHTML = "Rocket # " + rocketList[x - 1].rocketID + " has " + rocketList[x - 1].motors.length + " thrusters." +
-        "</b>" + " Speed: " + rocketList[x - 1].motors[0].power;
+        "</b>" + " Total speed: " + speed;
 }

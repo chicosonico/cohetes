@@ -8,13 +8,25 @@ class Motor {
         this.maxPower = maxPower;
     }
 
+    get getPower() {
+        return this.power;
+    }
+
+
     increasePower() {
-        this.power += 10
+        if(this.power < this.maxPower){
+            this.power += 10;
+        } 
     }
 
     decreasePower() {
-        this.power -= 10
+        if(this.power > 0){
+            this.power -= 10;
+        }
+        
     }
+
+    
 
 
 }

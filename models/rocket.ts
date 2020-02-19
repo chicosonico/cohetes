@@ -11,6 +11,18 @@ class Rocket {
         this.motors.push(motor);
     }
 
-}
+     totalSpeed(){
+        var result: number = 0; 
+    for(let i=0; i < this.motors.length; i++){
+       result = result + this.motors[i].getPower;
+    } return result;
+  } 
+      
+        
+
+
+    }
+
+
 
 
