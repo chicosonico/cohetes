@@ -1,358 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- testing Git Hub Mac ' Otra vez  y Mas-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rockets</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
 </head>
-
 <body>
-    <main class="container my-5 ">
-
-        <div id="hManyInput" style="display:block">
-            <div class="row align-items-center">
-                <div class="col">
-
-                </div>
-                <div class="col">
-                    <h1 style="text-align: center;">How many Rockets?</h1>
-                </div>
-                <div class="col">
-
-                </div>
-
-            </div>
-
-            <div>
-
-                <form class="container my-5">
-
-                    <div class="row d-flex justify-content-center">
-
-                        
-                        <div class="form-group col-md-2">   
-                        </div>
-
-                        <div class="form-group col-md-2">
-                            <label for="hMany">Type how many rockets you need: </label>
-                            <input type="text" class="form-control" id="hMany">
-                        </div>
-
-
-                        <div class="form-group col-md-2">       
-                        </div>
-
-                    </div>
-
-                   
-                    <div class="row d-flex justify-content-center">
-                        <div class="form-group col-md-2">
-                        </div>
-                        <div class="form-group col-md-2">
-                            <button type="button" class="btn btn-primary" onclick="getManyRockets()  ">Create</button>
-                            <p id="carInfo"></p>
-                        </div>
-
-                        <div class="form-group col-md-2">
-                        </div>
-
-
-                    </div>
-
-                </form>
-            </div>
-
-
+    <main class="container">
+     <div class="row mt-5"></div>
+     <div class="col-12 mt-5">
+      </div>
+     <div class="row">
+         <div class="col-4">
+         </div>
+         <div class="col-2 d-flex justify-content-center">
+            <button type="button" class="btn btn-light" id="createRocket1" onclick="createRocket()">Create Rocket 1</button>
         </div>
-
-
-        <div id="create_rockets" style="display:none">
-            <div class="row align-items-center">
-                <div class="col">
-
-                </div>
-                <div class="col">
-                    <h1 style="text-align: center;">Create Rockets</h1>
-                </div>
-                <div class="col">
-
-                </div>
-
-            </div>
-
-            <div>
-
-                <form class="container my-5">
-
-                    <div class="row d-flex justify-content-center">
-
-                        
-                        <div class="form-group col-md-2">   
-                        </div>
-
-                        <div class="form-group col-md-2" id="rocketId_title"> 
-Type the rocket #1 ID
-                        </div>
-
-
-                        <div class="form-group col-md-2">       
-                        </div>
-
-                    </div>
-
-                    <div class="row d-flex justify-content-center">
-
-                        
-                        <div class="form-group col-md-2">   
-                        </div>
-
-                        <div class="form-group col-md-2">
-                            <label for="inputRocket"></label>
-                            <input type="text" class="form-control" id="inputRocket">
-                        </div>
-
-
-                        <div class="form-group col-md-2">       
-                        </div>
-
-                    </div>
-
-                   
-                    <div class="row d-flex justify-content-center">
-                        <div class="form-group col-md-2">
-                        </div>
-                        <div class="form-group col-md-2">
-                            <button type="button" class="btn btn-primary" onclick="createRocket()">Create</button>
-                            <p id="carInfo"></p>
-                        </div>
-
-                        <div class="form-group col-md-2">
-                        </div>
-
-
-                    </div>
-
-                </form>
-            </div>
-
-
+        <div class="col-2 d-flex justify-content-center">
+            <button type="button" class="btn btn-light" id="createRocket2" onclick="createRocket()">Create Rocket 2</button>
         </div>
-     
-
-        <!-- Car Created Title -->
-        <div id="carCreatedTitle" style="display:none">
-            <div class="row align-items-center">
-                <div class="col">
-                </div>
-                <div class="col">
-                    <h1 style="text-align: center;">Rocket Created</h1>
-                </div>
-                <div class="col">
-                </div>
-            </div>
-    
-    
-            <div class="row d-flex justify-content-center my-5">
-    
-                <div class="form-group col-md-2" >
-                    Rocket# 
-                </div>
-    
-                <div class="form-group col-md-2" id="rocketID1">
-                </div>
-    
-                <div class="form-group col-md-2" >
-                </div>
-            </div>
-            
-            <div class="row d-flex justify-content-center my-5">
-    
-                <div class="form-group col-md-2" >
-                    Rocket# 
-                </div>
-    
-                <div class="form-group col-md-2" id="rocketID2">
-                </div>
-    
-                <div class="form-group col-md-2" >
-                </div>
-            </div>
-
+        <div class="col-4">
+        </div>
+     </div>
+     <div class="col-12 mt-5">
+    </div>
+   <div class="row">
+       <div class="col-2">
+       </div>
+       <div class="col-2 d-flex justify-content-around">  
+            <button type="button" class="btn btn-light"id="accelerateRocket1" onclick="incPower(1)">Accelerate Rocket 1</button>   
+     </div>
+    <div class="col-2 d-flex justify-content-around">
+        <button type="button" class="btn btn-light"id="breakRocket1" onclick="decPower(1)">Break Rocket 1</button>
+    </div>
+      <div class="col-2 d-flex justify-content-around">
+          <button type="button" class="btn btn-light" id="accelerateRocket2" onclick="incPower(2)">Accelerate Rocket 2</button>
+      </div>
+      <div class="col-2 d-flex justify-content-around">
+        <button type="button" class="btn btn-light"id="breakRocket2" onclick="decPower(2)">Break Rocket 2</button>
+      </div>
+      <div class="col-2 ">
+      </div>
+   </div>
+   <div class="col-12 mt-5">
+      </div>
+     <div class="row">
+         <div class="col-3">
+         </div>
+         <div class="col-2 d-flex justify-content-center">
+            <button type="button" class="btn btn-light" onclick="showRocket(1)">Info Rocket 1</button>
+        </div>
+        <div class="col-2 d-flex justify-content-center">
+            <button type="button" class="btn btn-light" onclick="showRocket(2)">Info Rocket 2</button>
         </div>
         
-        <!-- End Car Created Title -->
-
-        <!-- second form -->
-        <div id="addWheels" style="display:none">
-            <div class="row align-items-center">
-                <div class="col">
-                </div>
-                <div class="col">
-                    <h2 style="text-align: center;">Add Wheels</h2>
-                </div>
-                <div class="col">
-                </div>
-
-            </div>
-
-            <div>
-                <form class="container my-5">
-                    <div class="my-5">
-                        <form class="container my-5">
-                            <div class="row d-flex justify-content-center">
-
-                                <div class="form-group col-md-2">
-                                    <label for="brandWheel1">Brand 1</label>
-                                    <input type="text" class="form-control" id="brandInput1">
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="brandWheel2">Brand 2</label>
-                                    <input type="text" class="form-control" id="brandInput2">
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="brandWheel3">Brand 3</label>
-                                    <input type="text" class="form-control" id="brandInput3">
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="brandWheel4">Brand 4</label>
-                                    <input type="text" class="form-control" id="brandInput4">
-                                </div>
-
-                            </div>
-                            <div class="row d-flex justify-content-center">
-
-                                <div class="form-group col-md-2">
-                                    <label for="diamWheel1">Diameter 1</label>
-                                    <input type="text" class="form-control" id="diamInput1">
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="diamWheel2">Diameter 2</label>
-                                    <input type="text" class="form-control" id="diamInput2">
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="diamWheel3">Diameter 3</label>
-                                    <input type="text" class="form-control" id="diamInput3">
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="diamWheel4">Diameter 4</label>
-                                    <input type="text" class="form-control" id="diamInput4">
-                                </div>
-
-
-
-                            </div>
-                            <div class="row d-flex justify-content-center my-5">
-                                <div class="form-group col-md-4">
-                                    <button type="button" class="btn btn-primary" onclick="addWheels()">
-                                        Add Wheels
-                                    </button>
-                                </div>
-
-                                <div class="form-group col-md-2">
-                                </div>
-
-                                <div class="form-group col-md-2">
-                                </div>
-                            </div>
-
-                        </form>
-
-                    </div>
-            </div>
+        <div class="col-2 d-flex justify-content-center">
+            <button type="button" class="btn btn-light">Info All Rocket</button>
         </div>
-        <!-- end second form -->
-
-        <!-- third form -->
-
-
-        <!-- print Wheels  -->
-        <div id="showCarCreated" style="display:none">
-            <!-- title -->
-            <div class="col">
-            </div>
-            <div class="col">
-                <h2 style="text-align: center;">Car Created</h2>
-            </div>
-            <div class="col">
-            </div>
-
-            <!-- wheels brand -->
-
-            <!-- <div class="row d-flex justify-content-center my-3">
-                <div class="form-group col-md-2" id="brandOutput1">
-                </div>
-
-                <div class="form-group col-md-2" id="brandOutput2">
-                </div>
-
-                <div class="form-group col-md-2" id="brandOutput3">
-                </div>
-
-                <div class="form-group col-md-2" id="brandOutput4">
-                </div>
-
-            </div> -->
-
-            <!-- wheels diameter -->
-
-            <!-- <div class="row  justify-content-center">
-
-                <div class="form-group col-md-2" id="diamOutput1">
-                </div>
-                <div class="form-group col-md-2" id="diamOutput2">
-                </div>
-                <div class="form-group col-md-2" id="diamOutput3">
-                </div>
-                <div class="form-group col-md-2" id="diamOutput4">
-                </div>
-            </div> -->
-
-            <div class="media my-5">
-               
-                <div class=" row d-flex justify-content-center media-body">
-                  
-                  <img src="https://drop.ndtv.com/albums/AUTO/porsche-taycan-turbo/6401200x900_1_640x480.jpg" class="col-md-3 " alt="car it academy">
-                  <ul class="col-md-3 list-group">
-                    <li class="list-group-item" id="plateCreated"></li>
-                    <li class="list-group-item" id="brandCreated"></li>
-                    <li class="list-group-item" id="colorCreated"></li>
-                   
-                  </ul>
-                  
-                  <ul class="col-md-3 list-group">
-                  
-                    <li class="list-group-item" id="brandOutput1"></li>
-                    <li class="list-group-item" id="brandOutput2"></li>
-                    <li class="list-group-item" id="brandOutput3"></li>
-                    <li class="list-group-item" id="brandOutput4"></li>
-                  </ul>
-                 
-                  <ul class="col-md-3 list-group">
-                    <li class="list-group-item" id="diamOutput1"></li>
-                    <li class="list-group-item" id="diamOutput2"></li>
-                    <li class="list-group-item" id="diamOutput3"></li>
-                    <li class="list-group-item" id="diamOutput4"></li>
-                   
-                  </ul>
-                  
-                </div>
-              </div>
-
+        <div class="col-3">
         </div>
-        <!-- end third form -->
-
-
+     </div>
+     <div class="row mt-5"></div>
+     <div class="row">
+        <div class="col-3">
+        </div>
+        <div class="col- 4d-flex justify-content-center" >
+            <h4 id="showInfo"></h4>
+         </div>
+         <div class="col-4">
+        </div>
+         </div>
 
     </main>
 
-    <script src="../models/car.js"></script>
-    <script src="../models/wheel.js"></script>
+
+    <script src="../models/motor.js"></script>
+    <script src="../models/rocket.js"></script>
     <script src="../controllers/controller.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -364,9 +89,5 @@ Type the rocket #1 ID
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-
-
-
 </body>
-
 </html>
