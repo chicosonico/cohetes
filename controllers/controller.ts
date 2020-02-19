@@ -45,7 +45,10 @@ function incPower(x: number) {
     
     rocketList[x - 1].motors[i].increasePower();
   }
+  var speed = rocketList[x - 1].totalSpeed();
   console.log(rocketList);
+  let showSpeed = document.getElementById("showSpeed") as HTMLElement;
+  showSpeed.innerHTML =  " Total speed: " + speed ;
 }
 
 
@@ -53,14 +56,18 @@ function decPower(x: number) {
   for (let i = 0; i < rocketList[x - 1].motors.length; i++) {
     rocketList[x - 1].motors[i].decreasePower();
   }
+  var speed = rocketList[x - 1].totalSpeed();
   console.log(rocketList);
+  let showSpeed = document.getElementById("showSpeed") as HTMLElement;
+  showSpeed.innerHTML =  " Total speed: " + speed ;
 }
 
 function showRocket(x:number){
-  var speed = rocketList[0].totalSpeed();
+  var showMessage:any = document.getElementById("showMessage");
+  showMessage.style.display = "block";
   let showInfo = document.getElementById("showInfo") as HTMLElement;
-  showInfo.innerHTML = "Rocket # " + rocketList[x-1].rocketID + " has " + rocketList[x - 1].motors.length + " thrusters."+
-  "</b>" + " Total speed: " + speed ;
+  showInfo.innerHTML = "Rocket # " + rocketList[x-1].rocketID + " has " + rocketList[x - 1].motors.length + " thrusters."
+ 
   
  
 }

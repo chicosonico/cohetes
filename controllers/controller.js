@@ -38,17 +38,23 @@ function incPower(x) {
     for (var i = 0; i < rocketList[x - 1].motors.length; i++) {
         rocketList[x - 1].motors[i].increasePower();
     }
+    var speed = rocketList[x - 1].totalSpeed();
     console.log(rocketList);
+    var showSpeed = document.getElementById("showSpeed");
+    showSpeed.innerHTML = " Total speed: " + speed;
 }
 function decPower(x) {
     for (var i = 0; i < rocketList[x - 1].motors.length; i++) {
         rocketList[x - 1].motors[i].decreasePower();
     }
+    var speed = rocketList[x - 1].totalSpeed();
     console.log(rocketList);
+    var showSpeed = document.getElementById("showSpeed");
+    showSpeed.innerHTML = " Total speed: " + speed;
 }
 function showRocket(x) {
-    var speed = rocketList[0].totalSpeed();
+    var showMessage = document.getElementById("showMessage");
+    showMessage.style.display = "block";
     var showInfo = document.getElementById("showInfo");
-    showInfo.innerHTML = "Rocket # " + rocketList[x - 1].rocketID + " has " + rocketList[x - 1].motors.length + " thrusters." +
-        "</b>" + " Total speed: " + speed;
+    showInfo.innerHTML = "Rocket # " + rocketList[x - 1].rocketID + " has " + rocketList[x - 1].motors.length + " thrusters.";
 }
