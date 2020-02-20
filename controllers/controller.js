@@ -40,7 +40,7 @@ function incPower(x) {
     }
     var speed = rocketList[x - 1].totalSpeed();
     console.log(rocketList);
-    var showSpeed = document.getElementById("showSpeed");
+    var showSpeed = document.getElementById("showSpeed" + x);
     showSpeed.innerHTML = " Total speed: " + speed;
 }
 function decPower(x) {
@@ -49,12 +49,12 @@ function decPower(x) {
     }
     var speed = rocketList[x - 1].totalSpeed();
     console.log(rocketList);
-    var showSpeed = document.getElementById("showSpeed");
+    var showSpeed = document.getElementById("showSpeed" + (x));
     showSpeed.innerHTML = " Total speed: " + speed;
 }
 function showRocket(x) {
-    var showMessage = document.getElementById("showMessage");
+    var showMessage = document.getElementById("showMessage" + (x));
     showMessage.style.display = "block";
-    var showInfo = document.getElementById("showInfo");
+    var showInfo = document.getElementById("showInfo" + x);
     showInfo.innerHTML = "Rocket # " + rocketList[x - 1].rocketID + " has " + rocketList[x - 1].motors.length + " thrusters.";
 }

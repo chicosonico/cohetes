@@ -15,9 +15,7 @@ function createRocket() {
     rocketList.push(newRocket);
     console.log(newMotor);
     console.log(rocketList);
-
   }
-
 }
 
 function addPropulsores(newRocket: any) {
@@ -47,7 +45,7 @@ function incPower(x: number) {
   }
   var speed = rocketList[x - 1].totalSpeed();
   console.log(rocketList);
-  let showSpeed = document.getElementById("showSpeed") as HTMLElement;
+  let showSpeed = document.getElementById("showSpeed" + x) as HTMLElement;
   showSpeed.innerHTML =  " Total speed: " + speed ;
 }
 
@@ -58,19 +56,19 @@ function decPower(x: number) {
   }
   var speed = rocketList[x - 1].totalSpeed();
   console.log(rocketList);
-  let showSpeed = document.getElementById("showSpeed") as HTMLElement;
+  let showSpeed = document.getElementById("showSpeed" + (x)) as HTMLElement;
   showSpeed.innerHTML =  " Total speed: " + speed ;
 }
 
 function showRocket(x:number){
-  var showMessage:any = document.getElementById("showMessage");
+  var showMessage:any = document.getElementById("showMessage" + (x)) as HTMLElement;
   showMessage.style.display = "block";
-  let showInfo = document.getElementById("showInfo") as HTMLElement;
+  let showInfo = document.getElementById("showInfo" + x) as HTMLElement;
   showInfo.innerHTML = "Rocket # " + rocketList[x-1].rocketID + " has " + rocketList[x - 1].motors.length + " thrusters."
  
-  
- 
 }
+
+
 
 
 
