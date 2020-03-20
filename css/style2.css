@@ -654,22 +654,22 @@ body {
 }
 
 .star2 li:nth-child(4) {
-  left: -100px;
-  top: 200px;
+  left: 180px;
+  top: -12px;
   -webkit-animation: twinkle 0.5s ease infinite;
           animation: twinkle 0.5s ease infinite;
 }
 
 .star2 li:nth-child(5) {
-  left: 190px;
+  left: 110px;
   top: 100px;
   -webkit-animation: twinkle 0.4s ease infinite;
           animation: twinkle 0.4s ease infinite;
 }
 
 .star2 li:nth-child(6) {
-  top: 100px;
-  left: -60px;
+  top: 250px;
+  left: 135px;
   -webkit-animation: twinkle 0.2s infinite;
           animation: twinkle 0.2s infinite;
 }
