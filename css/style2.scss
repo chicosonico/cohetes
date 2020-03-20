@@ -178,8 +178,8 @@ body {
     animation: twinkle 0.4s infinite;
   }
   &:nth-child(2) {
-    top: 0;
-    left: 60px;
+    top: -15px;
+    left: 90px;
     animation: twinkle 0.5s infinite;
     &:before {
       height: 1px;
@@ -397,7 +397,7 @@ body {
         width: 200px;
         height: 200px;
         bottom: -300px;
-        animation: fumes 1s  4s infinite;
+        animation: fumes 8s infinite;
       }
       &:nth-child(2) {
         width: 150px;
@@ -449,7 +449,7 @@ body {
       &:nth-child(9) {
         width: 80px;
         height: 80px;
-        left: 200px;
+        left: 120px;
         top: 380px;
         animation: fumes 18s infinite;
       }

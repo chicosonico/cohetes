@@ -203,8 +203,8 @@ body {
 }
 
 .star1 li:nth-child(2) {
-  top: 0;
-  left: 60px;
+  top: -15px;
+  left: 90px;
   -webkit-animation: twinkle 0.5s infinite;
           animation: twinkle 0.5s infinite;
 }
@@ -524,8 +524,8 @@ body {
   width: 200px;
   height: 200px;
   bottom: -300px;
-  -webkit-animation: fumes 1s  4s infinite;
-          animation: fumes 1s  4s infinite;
+  -webkit-animation: fumes 8s infinite;
+          animation: fumes 8s infinite;
 }
 
 .rocket2 .exhaust-fumes2 li:nth-child(2) {
@@ -590,7 +590,7 @@ body {
 .rocket2 .exhaust-fumes2 li:nth-child(9) {
   width: 80px;
   height: 80px;
-  left: 200px;
+  left: 120px;
   top: 380px;
   -webkit-animation: fumes 18s infinite;
           animation: fumes 18s infinite;
