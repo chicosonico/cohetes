@@ -20,7 +20,7 @@ body {
   .rocket-body1 {
     width: 80px;
     left: calc(50% - 50px);
-    animation: bounce 0.3s infinite;
+    animation: bounce 0.2s infinite;
     .body1 {
       background-color: $lightgrey;
       height: 180px;
@@ -227,7 +227,7 @@ body {
           width: 14px;
           background: linear-gradient(to bottom, transparent 10%, $fire1 100%);
           height: 150px;
-          left: calc(60% - 14px);
+          left: calc(59% - 14px);
           animation: exhaust 0.2s infinite;
         }
         .exhaust-flame1R3-3{
@@ -714,7 +714,7 @@ body {
               width: 14px;
               background: linear-gradient(to bottom, transparent 10%, $fire1 100%);
               height: 150px;
-              left: calc(60% - 14px);
+              left: calc(59% - 14px);
               animation: exhaust 0.2s infinite;
             }
             .exhaust-flame2R3-3{
@@ -933,7 +933,7 @@ body {
       transform: translate3d(0px, 0px, 0);
     }
     50% {
-      transform: translate3d(0px, -4px, 0);
+      transform: translate3d(0px, -5px, 0);
     }
     100% {
       transform: translate3d(0px, 0px, 0);
